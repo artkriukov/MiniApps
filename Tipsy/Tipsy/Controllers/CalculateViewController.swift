@@ -25,6 +25,12 @@ extension CalculateViewController: CalculateViewDelegate {
                                                                tipPercentage: tipPercentage,
                                                                peopleCount: peopleCount)
         let finalResult = String(format: "%.2f", totalPerPerson)
+        
+        let resultViewController = ResultViewController()
+        resultViewController.totalPerPerson = totalPerPerson
+        resultViewController.numberOfPeople = peopleCount
+        resultViewController.tipPercentage = Int(tipPercentage * 100)
+        self.present(resultViewController, animated: true, completion: nil)
         print("Каждый должен заплатить: \(finalResult)")
     }
     
