@@ -8,12 +8,26 @@
 import UIKit
 
 class CalculateViewController: UIViewController {
-
+    
+    private let calculateView = CalculateView()
+    private let calculateModel = CalculateModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        self.view = calculateView
+        calculateView.delegate = self
     }
+}
 
-
+extension CalculateViewController: CalculateViewDelegate {
+    func calculateButtonTapped(amount: Double, tipPercentage: Double, peopleCount: Int) {
+        let totalPerPerson = calculateModel.calculateTotalBill(amount: amount,
+                                                               tipPercentage: tipPercentage,
+                                                               peopleCount: peopleCount)
+        let finalResult = String(format: "%.2f", totalPerPerson)
+        print("Каждый должен заплатить: \(finalResult)")
+    }
+    
+    
 }
 

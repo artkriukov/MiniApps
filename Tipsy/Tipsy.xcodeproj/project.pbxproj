@@ -10,9 +10,22 @@
 		5B320DFD2D631C930082D5F5 /* Tipsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tipsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5B320E662D6323C80082D5F5 /* Exceptions for "Tipsy" folder in "Tipsy" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 5B320DFC2D631C930082D5F5 /* Tipsy */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		5B320DFF2D631C930082D5F5 /* Tipsy */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5B320E662D6323C80082D5F5 /* Exceptions for "Tipsy" folder in "Tipsy" target */,
+			);
 			path = Tipsy;
 			sourceTree = "<group>";
 		};
