@@ -8,7 +8,8 @@
 import UIKit
 
 protocol WelcomeViewDelegate: AnyObject {
-    func buttonsTapped()
+    func registerBbuttonsTapped()
+    func logInButtonsTapped()
 }
 
 final class WelcomeViewController: UIViewController, WelcomeViewDelegate {
@@ -24,11 +25,12 @@ final class WelcomeViewController: UIViewController, WelcomeViewDelegate {
         welcomeView.delegate = self
     }
 
-    internal func buttonsTapped() {
-        
-        
-        
+    internal func registerBbuttonsTapped() {
         navigationController?.pushViewController(RegisterViewController(), animated: true)
+    }
+    
+    internal func logInButtonsTapped() {
+        navigationController?.pushViewController(ChatViewController(), animated: true)
     }
 }
 

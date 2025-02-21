@@ -58,10 +58,10 @@ class WelcomeView: UIView {
     
     @objc private func buttonsTapped(_ sender: UIButton) {
         
-        if sender.currentTitle == K.registerName {
-            delegate?.buttonsTapped()
-        } else if sender.currentTitle == K.logInName {
-            delegate?.buttonsTapped()
+        if sender.tag == 0 {
+            delegate?.registerBbuttonsTapped()
+        } else if sender.tag == 1 {
+            delegate?.logInButtonsTapped()
         }
         
     }
@@ -78,6 +78,9 @@ private extension WelcomeView {
         
         loginButton.addTarget(self, action: #selector(buttonsTapped), for: .touchUpInside)
         registerButton.addTarget(self, action: #selector(buttonsTapped), for: .touchUpInside)
+        
+        registerButton.tag = 0
+        loginButton.tag = 1
     }
     
     func setupConstraints() {
@@ -99,13 +102,4 @@ private extension WelcomeView {
     }
 }
 
-extension UIButton {
-    convenience init(titleColor: UIColor?, title: String?, backgroundColor: UIColor? = .clear) {
-        self.init(type: .system)
-        self.titleLabel?.font = .systemFont(ofSize: 30)
-        self.tintColor = titleColor
-        self.backgroundColor = backgroundColor
-        self.setTitle(title, for: .normal)
-        self.translatesAutoresizingMaskIntoConstraints = false
-    }
-}
+
