@@ -99,5 +99,4 @@ private extension CoinView {
             currencyPicker.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
         ])
     }
-    
 }
