@@ -16,7 +16,6 @@ class WelcomeView: UIView {
         let element = UILabel()
         element.textColor = UIColor(named: K.BrandColors.blue)
         element.font = .systemFont(ofSize: 50, weight: .black)
-        element.text = K.appName
         element.translatesAutoresizingMaskIntoConstraints = false
         return element
     }()
@@ -39,14 +38,32 @@ class WelcomeView: UIView {
         super.init(frame: .zero)
         setupViews()
         setupConstraints()
+        animatedText()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    private func animatedText() {
+        titleLabel.text = ""
+        let titleText = K.appName
+        
+        for letter in titleText.enumerated() {
+            Timer.scheduledTimer(withTimeInterval: 0.1 * Double(letter.offset), repeats: false) { timer in
+                self.titleLabel.text! += String(letter.element)
+            }
+        }
+    }
+    
     @objc private func buttonsTapped(_ sender: UIButton) {
-        delegate?.buttonsTapped()
+        
+        if sender.currentTitle == K.registerName {
+            delegate?.buttonsTapped()
+        } else if sender.currentTitle == K.logInName {
+            delegate?.buttonsTapped()
+        }
+        
     }
 }
 

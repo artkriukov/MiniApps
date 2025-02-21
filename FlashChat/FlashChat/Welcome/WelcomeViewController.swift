@@ -13,9 +13,9 @@ protocol WelcomeViewDelegate: AnyObject {
 
 final class WelcomeViewController: UIViewController, WelcomeViewDelegate {
     // MARK: - Private Properties
-    
     private let welcomeView = WelcomeView()
     
+
     // MARK: - Life Circle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +25,9 @@ final class WelcomeViewController: UIViewController, WelcomeViewDelegate {
     }
 
     internal func buttonsTapped() {
+        
+        
+        
         navigationController?.pushViewController(RegisterViewController(), animated: true)
     }
 }
