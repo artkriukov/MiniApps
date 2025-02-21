@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		5B54D8A92D68A6D800CE5AC9 /* FlashChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B54D8F32D68AB6500CE5AC9 /* FlashChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		5B54D8BB2D68A6DA00CE5AC9 /* Exceptions for "FlashChat" folder in "FlashChat" target */ = {
+		5B54D9052D68AB6700CE5AC9 /* Exceptions for "FlashChat" folder in "FlashChat" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				Resources/Info.plist,
 			);
-			target = 5B54D8A82D68A6D800CE5AC9 /* FlashChat */;
+			target = 5B54D8F22D68AB6500CE5AC9 /* FlashChat */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		5B54D8AB2D68A6D800CE5AC9 /* FlashChat */ = {
+		5B54D8F52D68AB6500CE5AC9 /* FlashChat */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				5B54D8BB2D68A6DA00CE5AC9 /* Exceptions for "FlashChat" folder in "FlashChat" target */,
+				5B54D9052D68AB6700CE5AC9 /* Exceptions for "FlashChat" folder in "FlashChat" target */,
 			);
 			path = FlashChat;
 			sourceTree = "<group>";
@@ -32,7 +32,7 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5B54D8A62D68A6D800CE5AC9 /* Frameworks */ = {
+		5B54D8F02D68AB6500CE5AC9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,18 +42,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5B54D8A02D68A6D800CE5AC9 = {
+		5B54D8EA2D68AB6500CE5AC9 = {
 			isa = PBXGroup;
 			children = (
-				5B54D8AB2D68A6D800CE5AC9 /* FlashChat */,
-				5B54D8AA2D68A6D800CE5AC9 /* Products */,
+				5B54D8F52D68AB6500CE5AC9 /* FlashChat */,
+				5B54D8F42D68AB6500CE5AC9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5B54D8AA2D68A6D800CE5AC9 /* Products */ = {
+		5B54D8F42D68AB6500CE5AC9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5B54D8A92D68A6D800CE5AC9 /* FlashChat.app */,
+				5B54D8F32D68AB6500CE5AC9 /* FlashChat.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,64 +61,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5B54D8A82D68A6D800CE5AC9 /* FlashChat */ = {
+		5B54D8F22D68AB6500CE5AC9 /* FlashChat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B54D8BC2D68A6DA00CE5AC9 /* Build configuration list for PBXNativeTarget "FlashChat" */;
+			buildConfigurationList = 5B54D9062D68AB6700CE5AC9 /* Build configuration list for PBXNativeTarget "FlashChat" */;
 			buildPhases = (
-				5B54D8A52D68A6D800CE5AC9 /* Sources */,
-				5B54D8A62D68A6D800CE5AC9 /* Frameworks */,
-				5B54D8A72D68A6D800CE5AC9 /* Resources */,
+				5B54D8EF2D68AB6500CE5AC9 /* Sources */,
+				5B54D8F02D68AB6500CE5AC9 /* Frameworks */,
+				5B54D8F12D68AB6500CE5AC9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				5B54D8AB2D68A6D800CE5AC9 /* FlashChat */,
+				5B54D8F52D68AB6500CE5AC9 /* FlashChat */,
 			);
 			name = FlashChat;
 			packageProductDependencies = (
 			);
 			productName = FlashChat;
-			productReference = 5B54D8A92D68A6D800CE5AC9 /* FlashChat.app */;
+			productReference = 5B54D8F32D68AB6500CE5AC9 /* FlashChat.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5B54D8A12D68A6D800CE5AC9 /* Project object */ = {
+		5B54D8EB2D68AB6500CE5AC9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
-					5B54D8A82D68A6D800CE5AC9 = {
+					5B54D8F22D68AB6500CE5AC9 = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
-			buildConfigurationList = 5B54D8A42D68A6D800CE5AC9 /* Build configuration list for PBXProject "FlashChat" */;
+			buildConfigurationList = 5B54D8EE2D68AB6500CE5AC9 /* Build configuration list for PBXProject "FlashChat" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 5B54D8A02D68A6D800CE5AC9;
+			mainGroup = 5B54D8EA2D68AB6500CE5AC9;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 5B54D8AA2D68A6D800CE5AC9 /* Products */;
+			productRefGroup = 5B54D8F42D68AB6500CE5AC9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5B54D8A82D68A6D800CE5AC9 /* FlashChat */,
+				5B54D8F22D68AB6500CE5AC9 /* FlashChat */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5B54D8A72D68A6D800CE5AC9 /* Resources */ = {
+		5B54D8F12D68AB6500CE5AC9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -128,7 +128,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5B54D8A52D68A6D800CE5AC9 /* Sources */ = {
+		5B54D8EF2D68AB6500CE5AC9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -138,7 +138,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		5B54D8BD2D68A6DA00CE5AC9 /* Debug */ = {
+		5B54D9072D68AB6700CE5AC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -147,10 +147,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B6X45355LQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FlashChat/Info.plist;
+				INFOPLIST_FILE = FlashChat/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -166,7 +165,7 @@
 			};
 			name = Debug;
 		};
-		5B54D8BE2D68A6DA00CE5AC9 /* Release */ = {
+		5B54D9082D68AB6700CE5AC9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -175,10 +174,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B6X45355LQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FlashChat/Info.plist;
+				INFOPLIST_FILE = FlashChat/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -194,7 +192,7 @@
 			};
 			name = Release;
 		};
-		5B54D8BF2D68A6DA00CE5AC9 /* Debug */ = {
+		5B54D9092D68AB6700CE5AC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -257,7 +255,7 @@
 			};
 			name = Debug;
 		};
-		5B54D8C02D68A6DA00CE5AC9 /* Release */ = {
+		5B54D90A2D68AB6700CE5AC9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -316,25 +314,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5B54D8A42D68A6D800CE5AC9 /* Build configuration list for PBXProject "FlashChat" */ = {
+		5B54D8EE2D68AB6500CE5AC9 /* Build configuration list for PBXProject "FlashChat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5B54D8BF2D68A6DA00CE5AC9 /* Debug */,
-				5B54D8C02D68A6DA00CE5AC9 /* Release */,
+				5B54D9092D68AB6700CE5AC9 /* Debug */,
+				5B54D90A2D68AB6700CE5AC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5B54D8BC2D68A6DA00CE5AC9 /* Build configuration list for PBXNativeTarget "FlashChat" */ = {
+		5B54D9062D68AB6700CE5AC9 /* Build configuration list for PBXNativeTarget "FlashChat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5B54D8BD2D68A6DA00CE5AC9 /* Debug */,
-				5B54D8BE2D68A6DA00CE5AC9 /* Release */,
+				5B54D9072D68AB6700CE5AC9 /* Debug */,
+				5B54D9082D68AB6700CE5AC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5B54D8A12D68A6D800CE5AC9 /* Project object */;
+	rootObject = 5B54D8EB2D68AB6500CE5AC9 /* Project object */;
 }
