@@ -1,14 +1,16 @@
 //
-//  WelcomeView.swift
+//  RegisterView.swift
 //  FlashChat
 //
 //  Created by Artem Kriukov on 21.02.2025.
 //
 
 import UIKit
+import SnapKit
 
-class WelcomeView: UIView {
+final class RegisterView: UIView {
     // MARK: - UI
+
     
     
     // MARK: - Init
@@ -24,12 +26,14 @@ class WelcomeView: UIView {
 }
 
 // MARK: - Setup Views and Setup Constraints
-private extension WelcomeView {
+private extension RegisterView {
     func setupViews() {
-        backgroundColor = .white
+        backgroundColor = .systemTeal
+        
+
     }
     
     func setupConstraints() {
-        
+
     }
 }

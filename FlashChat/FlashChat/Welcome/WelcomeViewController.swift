@@ -7,8 +7,11 @@
 
 import UIKit
 
-final class WelcomeViewController: UIViewController {
+protocol WelcomeViewDelegate: AnyObject {
+    func buttonsTapped()
+}
 
+final class WelcomeViewController: UIViewController, WelcomeViewDelegate {
     // MARK: - Private Properties
     
     private let welcomeView = WelcomeView()
@@ -16,9 +19,13 @@ final class WelcomeViewController: UIViewController {
     // MARK: - Life Circle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.view = welcomeView
+        welcomeView.delegate = self
     }
 
-
+    internal func buttonsTapped() {
+        navigationController?.pushViewController(RegisterViewController(), animated: true)
+    }
 }
 
