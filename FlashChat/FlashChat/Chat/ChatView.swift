@@ -33,11 +33,12 @@ class ChatView: UIView {
     private lazy var enterButton: UIButton = {
         let element = UIButton(type: .system)
         element.setImage(UIImage(systemName: "paperplane.fill"), for: .normal)
+        element.addTarget(self, action: #selector(tappedEnterButton), for: .touchUpInside)
         element.translatesAutoresizingMaskIntoConstraints = false
         return element
     }()
     
-    private let messages = Message.getMessages()
+    private var messages = Message.getMessages()
     // MARK: - Init
     init() {
         super.init(frame: .zero)
@@ -54,12 +55,22 @@ class ChatView: UIView {
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
+    @objc private func tappedEnterButton() {
+        if let text = messageTF.text, !text.isEmpty {
+            messages.append(Message(sender: .me, body: text))
+            messageTF.text = ""
+            tableView.reloadData()
+            let indexPath = IndexPath(row: messages.count - 1, section: 0)
+            tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+        }
+    }
 }
 
 private extension ChatView {
     func setupViews() {
         backgroundColor = UIColor(named: K.BrandColors.purple)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: K.cellIdentifier)
+        tableView.register(MessageCell.self, forCellReuseIdentifier: K.cellIdentifier)
         tableView.backgroundColor = .white
         addSubview(tableView)
         
@@ -97,10 +108,10 @@ extension ChatView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as? MessageCell else { fatalError() }
         
         let model = messages[indexPath.row]
-        cell.textLabel?.text = model.body
+        cell.configure(model: model)
         
         return cell
     }
