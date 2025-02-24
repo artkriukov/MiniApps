@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import Firebase
 
 class ChatView: UIView {
+    
+    let db = Firestore.firestore()
 
     // MARK: - UI
     private let tableView = UITableView()
@@ -45,6 +48,7 @@ class ChatView: UIView {
         setDelegate()
         setupViews()
         setupConstraints()
+        loadMessages()
     }
     
     required init?(coder: NSCoder) {
@@ -57,12 +61,39 @@ class ChatView: UIView {
     }
     
     @objc private func tappedEnterButton() {
-        if let text = messageTF.text, !text.isEmpty {
-            messages.append(Message(sender: .me, body: text))
-            messageTF.text = ""
-            tableView.reloadData()
-            let indexPath = IndexPath(row: messages.count - 1, section: 0)
-            tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+        
+        if let messageBody = messageTF.text {
+            db.collection(K.FStore.collectionName).addDocument(data: [K.FStore.bodyField: messageBody]) { error in
+                if let e = error {
+                    print(e)
+                }else {
+                    print("Good job!")
+                }
+            }
+        }
+    }
+    
+    func loadMessages() {
+        messages = []
+        
+        db.collection(K.FStore.collectionName).getDocuments { querySnapshot, error in
+            if let e = error {
+                print("Problem")
+            } else {
+                if let snapshotDocuments = querySnapshot?.documents {
+                    for doc in snapshotDocuments {
+                        let data = doc.data()
+                        if let messageBody = data[K.FStore.bodyField] as? String {
+                            let newMassge = Message(sender: .me, body: messageBody)
+                            self.messages.append(newMassge)
+                            
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

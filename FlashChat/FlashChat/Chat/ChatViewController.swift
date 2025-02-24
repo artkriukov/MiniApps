@@ -6,17 +6,23 @@
 //
 
 import UIKit
+import Firebase
 
 class ChatViewController: UIViewController {
 
+    let db = Firestore.firestore()
+    
     private let chatView = ChatView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = chatView
         title = K.appName
+        
+        
     }
     
+
 
 }
 
