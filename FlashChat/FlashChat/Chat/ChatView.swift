@@ -63,7 +63,10 @@ class ChatView: UIView {
     @objc private func tappedEnterButton() {
         
         if let messageBody = messageTF.text {
-            db.collection(K.FStore.collectionName).addDocument(data: [K.FStore.bodyField: messageBody]) { error in
+            db.collection(K.FStore.collectionName).addDocument(data: [
+                K.FStore.bodyField: messageBody,
+                K.FStore.dateField: Date().timeIntervalSince1970
+            ]) { error in
                 if let e = error {
                     print(e)
                 }else {
@@ -74,9 +77,14 @@ class ChatView: UIView {
     }
     
     func loadMessages() {
-        messages = []
+        self.messages = []
         
-        db.collection(K.FStore.collectionName).getDocuments { querySnapshot, error in
+        db.collection(K.FStore.collectionName)
+            .order(by: K.FStore.dateField)
+            .addSnapshotListener { querySnapshot, error in
+            
+            self.messages = []
+            
             if let e = error {
                 print("Problem")
             } else {
@@ -96,6 +104,8 @@ class ChatView: UIView {
             }
         }
     }
+    
+    
 }
 
 private extension ChatView {
